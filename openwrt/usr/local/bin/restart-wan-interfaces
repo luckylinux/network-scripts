@@ -7,7 +7,7 @@ interface="wan"
 echo "Bringing down Interface ${interface}"
 
 # Stop Interfaces
-ifdown wan
+ifdown ${interface}
 
 # Wait a bit
 sleep 5
@@ -16,4 +16,4 @@ sleep 5
 echo "Bringing up again Interface ${interface}"
 
 # Start Interfaces
-ifup wan
+ifup ${interface}
