@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Define Interface
+interface="wan6"
+
+# Echo
+echo "Bringing down Interface ${interface}"
+
+# Stop Interfaces
+ifdown ${interface}
+
+# Wait a bit
+sleep 5
+
+# Echo
+echo "Bringing up again Interface ${interface}"
+
+# Start Interfaces
+ifup ${interface}
